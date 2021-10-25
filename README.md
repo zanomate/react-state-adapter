@@ -62,7 +62,7 @@ and returns a more complex object, that can contains:
 #### Example:
 
 I want to shape a state around the "theme mode", that in my application is of type string; possible values for the state
-are `light` nd`dark`.
+are `light` and `dark`.
 
 ```js
 const asThemeMode = (mode = 'light', set) => ({
@@ -97,14 +97,14 @@ const themeMode = use(asThemeMode)()
 Eventually you can pass an initial value to override the one in your adapter:
 
 ```js
-const themeMode = use(asThemeMode)('theme')
+const themeMode = use(asThemeMode)('dark')
 ```
 
 Now, you can access all the previously defined properties.
 
 ```js
-<span>{themeMode.mode}</span> // 'light'
-<span>{themeMode.isDark}</span> // false
+<span>{themeMode.mode}</span> // 'dark'
+<span>{themeMode.isDark}</span> // true
 ```
 
 or use the custom methods:
